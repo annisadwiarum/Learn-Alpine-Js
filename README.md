@@ -16,3 +16,9 @@
 5. cara install :
  - pake CDN. masukkan script ini di index.html (<script src="//unpkg.com/alpinejs" defer></script>)
  - install lewat npm (npm install alpinejs). lalu import ke aplikasi. 
+
+6. State di Alpine Js
+    - state adalah inti dari semua yang kita lakukan di Alpine Js.
+    - data javascript yang di pantau perubahannya oleh alpine
+    - bisa di buat local ataupun global (ex : x-data untuk local, dan Alpine.store() untuk global)
+    
