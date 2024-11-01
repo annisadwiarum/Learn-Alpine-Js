@@ -21,4 +21,8 @@
     - state adalah inti dari semua yang kita lakukan di Alpine Js.
     - data javascript yang di pantau perubahannya oleh alpine
     - bisa di buat local ataupun global (ex : x-data untuk local, dan Alpine.store() untuk global)
+
+7. Alpine Js menawarkan banyak directive untuk memanipulasi DOM. Seperti:
+    - x-text = untuk konten teks
+
     
