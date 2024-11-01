@@ -25,6 +25,13 @@
 
      <!-- data less alpine -->
     <button x-data @click="alert('tombol telah di klik!')" class="bg-blue-300 rounded-md py-2 px-4 font-bold">Klik di sini</button>
+
+    <!-- directive untuk memanipulasi DOM -->
+    <div x-data="{name: 'Annisa', age: 25, link: '<a href=\'https://github.com/annisadwiarum\'>Github</a>'}" class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm">Hallo <span x-text="name"></span>!</h1>
+        <p>Umur Kamu adalah bilangan <span x-text="age % 2 === 0 ? 'Genap' : 'Ganjil'"></span></p>
+        <button x-html="link" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
+    </div>
 </body>
 </html>
 
