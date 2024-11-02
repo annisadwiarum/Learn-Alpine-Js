@@ -32,6 +32,27 @@
         <p>Umur Kamu adalah bilangan <span x-text="age % 2 === 0 ? 'Genap' : 'Ganjil'"></span></p>
         <button x-html="link" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
     </div>
+
+    <!-- toggling element -->
+    <div x-data="{open: false}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-blue-200 p-10 rounded-xl shadow">
+        <button @click="open = !open" x-text="open === false ? 'Buka' : 'Tutup'" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
+        <div x-show="open" class="w-3/4 bg-blue-500 text-white mt-4 rounded-md py-2 px-4 font-bold">Lorem ipsum dolor sit amet...</div>
+    </div>
+
+    <!-- toggling element dengan x-if (template) -->
+    <div x-data="{open: false}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-orange-200 p-10 rounded-xl shadow">
+        <button @click="open = !open" x-text="open === false ? 'Buka' : 'Tutup'" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
+        <template x-if="open">
+            <div class="w-3/4 bg-blue-500 text-white mt-4 rounded-md py-2 px-4 font-bold">Lorem ipsum dolor sit amet...</div>
+        </template>
+    </div>
+
+    <!-- transition element -->
+    <div x-data="{open: false}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow">
+        <button @click="open = !open" x-text="open === false ? 'Buka' : 'Tutup'" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
+        <div x-show="open" class="w-3/4 bg-blue-500 text-white mt-4 rounded-md py-2 px-4 font-bold">Lorem ipsum dolor sit amet...</div>
+    </div>
+
 </body>
 </html>
 

@@ -25,6 +25,6 @@
 7. Alpine Js menawarkan banyak directive untuk memanipulasi DOM. Seperti:
     - x-text = untuk konten teks
     - x-html = untuk menyisipkan link url (inner html)
-    - x-show / x-if = toggling element
+    - x-show / x-if = toggling element (menampilkan dan menyembunyikan suatu elemen)
 
     
