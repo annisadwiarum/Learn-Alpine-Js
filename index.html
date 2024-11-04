@@ -49,8 +49,13 @@
 
     <!-- transition element -->
     <div x-data="{open: false}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow">
-        <button @click="open = !open" x-text="open === false ? 'Buka' : 'Tutup'" class="bg-gray-700 text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
-        <div x-show="open" class="w-3/4 bg-blue-500 text-white mt-4 rounded-md py-2 px-4 font-bold">Lorem ipsum dolor sit amet...</div>
+        <button @click="open = !open" x-text="open === false ? 'Buka' : 'Tutup'" x-bind:class="open ? 'bg-pink-700' : 'bg-gray-700'" class="text-white mt-2 rounded-md py-2 px-4 font-bold"></button>
+        <div x-show="open" x-transition.origin.buttom.duration.500ms class="w-3/4 bg-blue-500 text-white mt-4 rounded-md py-2 px-4 font-bold">Lorem ipsum dolor sit amet...</div>
+    </div>
+
+    <!-- mendengarkan event -->
+    <div x-data="{pesan: 'Hallo Annis'}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-violet-200 p-10 rounded-xl shadow">
+        <button @click="console.dir($event.target.dataset.pesan)" @click="ubahWarna" data-pesan="hello annis" id="tombolPesan" class="text-white mt-2 rounded-md py-2 px-4 font-bold bg-violet-400">Buka</button>
     </div>
 
 </body>
@@ -64,4 +69,8 @@
             nama: ['Annisa', 'George', 'Bonny'],
         });
     })
+
+    function ubahWarna(e) {
+        e.target.classList.add('bg-green-300');
+    }
 </script>

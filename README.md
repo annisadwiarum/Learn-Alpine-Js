@@ -26,5 +26,10 @@
     - x-text = untuk konten teks
     - x-html = untuk menyisipkan link url (inner html)
     - x-show / x-if = toggling element (menampilkan dan menyembunyikan suatu elemen)
+    - x-transition = untuk memberi transisi element. 
+    - x-bind = untuk membuat suatu kondisi perbandingan. ctnya memberikan dua kondisi class dari suatu element.
+    - x-on = mendengarkan event --- x-on{nama_event} atau @{nama_event}
+        - event object = $event - mencari tau informasi apa yang kita klik dan apa yang ada di dalamnya. event ini di jalankan ketika element/tombol di klik. 
+        - 
 
     
