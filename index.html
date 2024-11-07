@@ -58,6 +58,19 @@
         <button @click="console.dir($event.target.dataset.pesan)" @click="ubahWarna" data-pesan="hello annis" id="tombolPesan" class="text-white mt-2 rounded-md py-2 px-4 font-bold bg-violet-400">Buka</button>
     </div>
 
+    <!-- mendengarkan keyboard-->
+    <div x-data="{pesan: 'Hallo Annis'}" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-cyan-200 p-10 rounded-xl shadow">
+        <label for="name" class="text-sm font-medium text-gray-400 block mb-2">Input Your Name</label>
+        <input type="text" @keyup.enter="alert('data terkirim!')" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border:blue-500 block w-full p-2.5">
+    </div>
+
+    <!-- custom event-->
+    <div x-data="{pesan: 'Hallo Annis'}" @log="alert('Hallooo ' + $event.detail.name + '! Selamat, data kamu telah terkirim!')" class="flex flex-col items-center mx-auto w-1/2 text-center mt-10 bg-gray-200 p-10 rounded-xl shadow">
+        <label for="name" class="text-sm font-medium text-gray-400 block mb-2">Input Your Name</label>
+        <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border:blue-500 block w-full p-2.5">
+        <button @click="$dispatch('log', {name: 'Annisa'})" class="text-white mt-2 rounded-md py-2 px-4 font-bold bg-gray-700">Send</button>
+    </div>
+
 </body>
 </html>
 

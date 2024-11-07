@@ -30,6 +30,9 @@
     - x-bind = untuk membuat suatu kondisi perbandingan. ctnya memberikan dua kondisi class dari suatu element.
     - x-on = mendengarkan event --- x-on{nama_event} atau @{nama_event}
         - event object = $event - mencari tau informasi apa yang kita klik dan apa yang ada di dalamnya. event ini di jalankan ketika element/tombol di klik. 
-        - 
+        - keyboard event = @keyup(tombol di lepas) & @keydown(tombol di pencet) (mendengarkan apa yang di pencet pada keyboard).
+        - custom event = $dispatch(magic property) (bikin event sendiri selain yang ada di javascript).
+        - event modifiers = perilaku tambahan untuk event. ex : prevent, stop, outside, window, once, debounce, dst.
+            - prevent = menghentikan perilaku default dari sebuah elemen.
 
     
